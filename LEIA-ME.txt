@@ -1,0 +1,14 @@
+EIKON DIAG v1.1 — atualização
+
+Já tens o repositório no GitHub com o workflow (build.yml). Só tens de substituir os ficheiros:
+1) Extrai este .zip.
+2) No repositório: "Add file" -> "Upload files" -> seleciona TODOS os ficheiros extraídos
+   (os .java, build.gradle, settings.gradle, gradle.properties, AndroidManifest.xml). Faz "Commit changes".
+   Os ficheiros com o mesmo nome ficam substituídos. O build.yml não mudou.
+3) "Actions": espera o build ficar verde, vai a "Releases" -> última build -> descarrega EikonDiag.apk e instala por cima.
+
+COMO FAZER OS TESTES NOVOS
+A) "Testes novos COM LUZ": pousa o telemóvel PARADO (apoiado em livros, sem lhe tocar), com a câmara traseira
+   a apontar a uma parede/quadro/estante com textura e boa luz. Toca no botão: tens 8 s para pousar. Dura ~1-2 min.
+B) "Teste no ESCURO": toca no botão e, durante os 8 s, tapa a câmara traseira com o dedo e mantém até acabar.
+Depois de cada um: "Copiar resumo" e cola na conversa. Faz A e B (podem ser mensagens separadas).

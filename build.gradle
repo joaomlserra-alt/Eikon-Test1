@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application' version '8.5.2'
+}
+
+// Projeto "plano": todos os ficheiros ficam na raiz do repositório (mais fácil de enviar pelo telemóvel).
+// A pasta de build fica fora do repositório para não ser confundida com código-fonte.
+layout.buildDirectory.set(new File(System.getProperty('java.io.tmpdir'), 'eikondiag-build'))
+
+android {
+    namespace 'com.eikon.diag'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.eikon.diag'
+        minSdk 26
+        targetSdk 33
+        versionCode 2
+        versionName '1.1'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['.']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
